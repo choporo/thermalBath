@@ -52,6 +52,19 @@ export const fetchPropertiesAll = async () =>{
   return protertiesAll.length
 }
 
+export const fetchPropertiesRss = async () =>{
+  const protertiesAll = await db.property.findMany(
+    {select:{
+      id:true,
+      name: true,
+      feature: true,
+      updateAt: true
+    }}
+  )
+
+  return protertiesAll
+}
+
 export const fetchPropertiesSitemap = async () =>{
   const protertiesSitemap = await db.property.findMany({
     select:{

@@ -7,7 +7,7 @@ export default function robots():MetadataRoute.Robots{
             allow: ["/", "/properties", "/about"],
             disallow: "/admin"
         },
-        sitemap: "http://localhost:3000/sitemap.xml",
-        host: "http://localhost:3000"
+        sitemap: "https://thermalbath.co.kr/sitemap.xml",
+        host: "https://thermalbath.co.kr"
     }
 }
