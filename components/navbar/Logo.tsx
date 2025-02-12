@@ -1,8 +1,11 @@
 "use client";
 import React from "react";
-import Lottie from "react-lottie-player";
+// import Lottie from "react-lottie-player";
 import hotSpring from "@/public/json/hotSpring.json";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 function Logo() {
   return (
