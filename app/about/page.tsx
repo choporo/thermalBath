@@ -5,23 +5,24 @@ import bath from "@/public/images/bath.png";
 import Image from "next/image";
 import PcVersion from "@/components/about/PcVersion";
 import MobileVersion from "@/components/about/MobileVersion";
+import { Metadata } from "next";
 
 // import SpringDefine from "@/components/about/SpringDefine";
 // import newlogo from "@/public/images/newlogo.png";
 // import SpringDefine from "@/components/about/SpringDefine";
 // import WaterComponent from "@/components/about/WaterComponent";
 
-// export const metadata: Metadata = {
-//   title: "온천의 정의",
-//   description: "온천의 정의부터 온천수 성분 등을 알기 쉽게 정리",
-//   robots: {
-//     follow: true,
-//     index: true,
-//     googleBot: {
-//       index: true,
-//     },
-//   },
-// };
+export const metadata: Metadata = {
+  title: "한국의 온천",
+  description: "한국 온천의 정의부터 온천수 성분 등을 알기 쉽게 정리",
+  robots: {
+    follow: true,
+    index: true,
+    googleBot: {
+      index: true,
+    },
+  },
+};
 
 function AboutPage() {
   return (

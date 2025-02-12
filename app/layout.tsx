@@ -7,6 +7,7 @@ import Providers from "./providers";
 import PageTransition from "@/components/animation/PageTransition";
 import { Toaster } from "@/components/ui/toaster";
 import GoogleAnalytics from "@/components/google/GoogleAnalytics";
+import { GoogleAdSense } from "@/components/google/GoogleAdSence";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,6 +65,7 @@ export const metadata: Metadata = {
     index: true,
     googleBot: {
       index: true,
+      follow: true,
     },
   },
   verification: {
@@ -110,7 +112,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head></head>
+      <head>
+        <GoogleAdSense />
+      </head>
       <body className={pretendard.className}>
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
