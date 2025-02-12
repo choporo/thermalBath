@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Providers from "./providers";
 import PageTransition from "@/components/animation/PageTransition";
 import { Toaster } from "@/components/ui/toaster";
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     "온천",
     "hot spring",
     "Thermer spring",
+    "thermal baths",
     "hot spa",
     "온양온천",
     "동래온천",
@@ -62,6 +64,11 @@ export const metadata: Metadata = {
     index: true,
     googleBot: {
       index: true,
+    },
+  },
+  verification: {
+    other: {
+      "naver-site-verification": "85286c65d4504eaad837251f2e9b46baf18b7f0b",
     },
   },
 };
@@ -103,7 +110,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head></head>
       <body className={pretendard.className}>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <Providers>
           <Navbar />
           <PageTransition>
