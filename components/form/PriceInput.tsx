@@ -3,7 +3,7 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 
 type PriceInputProps = {
-  defaultValue?: number;
+  defaultValue?: string;
 };
 
 function PriceInput({ defaultValue }: PriceInputProps) {
