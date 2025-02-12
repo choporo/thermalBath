@@ -12,6 +12,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "noUnusedParameters": false, // 함수 인자
+    "noUnusedLocals": false, // 사용하지 않는 변수
     "plugins": [
       {
         "name": "next"

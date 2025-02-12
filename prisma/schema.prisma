@@ -1,0 +1,32 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Property {
+  id           String   @id @default(nanoid())
+  category     String
+  address      String
+  feature      String
+  name         String
+  hours        String
+  parking      String
+  fee          String
+  rating       String
+  baths        Int
+  openAirBaths Int
+  sauna        Int
+  image        String
+  amenity      String
+  phone        String
+  temperature  String
+  latitude     String
+  longitude    String
+  createAt     DateTime @default(now())
+  updateAt     DateTime @updatedAt
+}
