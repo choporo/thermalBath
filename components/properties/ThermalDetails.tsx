@@ -5,7 +5,6 @@ import { TbClockHour4 } from "react-icons/tb";
 import { IoWaterOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { LuFolderCheck } from "react-icons/lu";
-import { formatCurrency } from "@/utils/format";
 import { LuCircleParking } from "react-icons/lu";
 import { LiaTemperatureLowSolid } from "react-icons/lia";
 

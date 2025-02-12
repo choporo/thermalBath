@@ -1,8 +1,4 @@
 "use client";
-// import { Metadata } from "next";
-import bath from "@/public/images/bath.png";
-// import { WaterElement } from "@/utils/types";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SpringDefine from "@/components/about/SpringDefine";
 import WaterComponent from "@/components/about/WaterComponent";
@@ -11,7 +7,6 @@ import { IoIosArrowForward } from "react-icons/io";
 import MineralComposition from "@/components/about/MineralComposition";
 import { useEffect, useRef, useState } from "react";
 import { animate, motion } from "framer-motion";
-import { Sliders } from "lucide-react";
 import SpringFeatures from "@/components/about/SpringFeatures";
 
 function MobileVersion({ className }: { className: string }) {

@@ -4,7 +4,6 @@ import WaterComponent from "./WaterComponent";
 import { WaterElement } from "@/utils/types";
 import Image from "next/image";
 import newlogo from "@/public/images/newlogo.png";
-import bath from "@/public/images/bath.png";
 
 function PcVersion({ className }: { className: string }) {
   return (
