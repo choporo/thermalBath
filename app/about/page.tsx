@@ -1,16 +1,8 @@
-"use client";
-// import { Metadata } from "next";
 import bath from "@/public/images/bath.png";
-// import { WaterElement } from "@/utils/types";
 import Image from "next/image";
 import PcVersion from "@/components/about/PcVersion";
 import MobileVersion from "@/components/about/MobileVersion";
 import { Metadata } from "next";
-
-// import SpringDefine from "@/components/about/SpringDefine";
-// import newlogo from "@/public/images/newlogo.png";
-// import SpringDefine from "@/components/about/SpringDefine";
-// import WaterComponent from "@/components/about/WaterComponent";
 
 export const metadata: Metadata = {
   title: "한국의 온천",
