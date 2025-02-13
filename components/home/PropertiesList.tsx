@@ -1,10 +1,21 @@
+"use client";
 import { PropertyCardProps } from "@/utils/types";
 import PropertyCard from "../card/PropertyCard";
 import { FaRegPenToSquare } from "react-icons/fa6";
 
+import { useState } from "react";
+import PaginationSection from "../properties/PaginationSection";
+
 function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
+
+  const lastItemIndex = currentPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
+  const currentItems = properties.slice(firstItemIndex, lastItemIndex);
+
   return (
-    <div>
+    <>
       <div className="flex justify-end items-center">
         <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 " />
         <p className="text-xs mx-1 font-pretendard_bold text-right tracking-wider">
@@ -13,13 +24,19 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
         </p>
       </div>
       <section className="mt-2 gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
-        {properties.map((property, index) => {
-          return (
-            <PropertyCard key={property.id} property={property} index={index} />
-          );
+        {currentItems.map((property, index) => {
+          return <PropertyCard key={index} property={property} index={index} />;
         })}
       </section>
-    </div>
+      <div className="mt-5">
+        <PaginationSection
+          totalItems={properties.length}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
+    </>
   );
 }
 

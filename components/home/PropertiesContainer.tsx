@@ -1,6 +1,5 @@
 import { fetchProperties } from "@/utils/action";
 import { PropertyCardProps } from "@/utils/types";
-import React from "react";
 import EmptyList from "./EmptyList";
 import PropertiesList from "./PropertiesList";
 

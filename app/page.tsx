@@ -6,22 +6,23 @@ import { Suspense } from "react";
 function HomePage({
   searchParams,
 }: {
-  searchParams: { category?: string; search?: string };
+  searchParams: {
+    category?: string;
+    search?: string;
+  };
 }) {
-
-
   return (
     <section>
       <CategoriesList
         category={searchParams.category}
         search={searchParams.search}
       />
-      <Suspense fallback={<LoadingCard/>}>
+      <Suspense fallback={<LoadingCard />}>
         <PropertiesContainer
-        category={searchParams.category}
-        search={searchParams.search}/>
+          category={searchParams.category}
+          search={searchParams.search}
+        />
       </Suspense>
-      
     </section>
   );
 }

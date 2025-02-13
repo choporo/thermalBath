@@ -65,7 +65,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
-      <section className="p-2">
+      <section className="p-2 my-4 sm:mt-8">
         <BreadCrumbs category={category} name={name} />
         {/* <header className="flex justify-between items-center my-2">
         <h1 className="sm:flex sm:text-2xl text-base tracking-wider font-pretendard_bold">

@@ -4,7 +4,7 @@ import { imageSchema, propertySchema, validateWithZodSchema } from "./schemas";
 import { deleteImage, uploadImage } from "./supabase";
 import db from "./db";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { redirect, useSearchParams } from "next/navigation";
 
 const renderError = (error: unknown): { message: string } => {
   console.log(error);
@@ -76,12 +76,14 @@ export const fetchPropertiesSitemap = async () =>{
   return protertiesSitemap
 }
 
+
 export const fetchProperties = async ({
   search = "",
   category,
 }: {
   search?: string;
   category?: string;
+
 }) => {
   const properties = await db.property.findMany({
     where: {
@@ -110,10 +112,11 @@ export const fetchProperties = async ({
     orderBy: {
      baths: "asc"
     },
-    
   });
-  return properties;
+  return properties
 };
+
+
 
 export const fetchPropertyDetails = (id:string) => {
   return db.property.findUnique({

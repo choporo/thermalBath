@@ -8,29 +8,30 @@ import PropertyDetails from "@/components/properties/PropertyDetails";
 import { Separator } from "@/components/ui/separator";
 import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { Metadata } from "next";
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { id: string };
-// }): Promise<Metadata> {
-//   const response = await fetch(
-//     `https://www.hotspring.kr/properties/${params.id}`
-//   );
-//   const post = await fetchPropertyDetails(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const response = await fetch(
+    `https://www.thermalbath.co.kr/properties/${params.id}`
+  );
+  const post = await fetchPropertyDetails(params.id);
 
-//   return {
-//     title: post?.name,
-//     description: post?.feature,
-//     robots: {
-//       follow: true,
-//       index: true,
-//       googleBot: {
-//         index: true,
-//       },
-//     },
-//   };
-// }
+  return {
+    title: post?.name,
+    description: post?.feature,
+    robots: {
+      follow: true,
+      index: true,
+      googleBot: {
+        index: true,
+      },
+    },
+  };
+}
 
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);
@@ -64,7 +65,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
-      <section className="p-2">
+      <section className="p-2 my-4 sm:mt-8">
         <BreadCrumbs category={category} name={name} />
         {/* <header className="flex justify-between items-center my-2">
         <h1 className="sm:flex sm:text-2xl text-base tracking-wider font-pretendard_bold">

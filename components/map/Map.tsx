@@ -12,11 +12,11 @@ export default function Map({ loc }: { loc: Coordinates }) {
     const location = new naver.maps.LatLng(loc);
     const mapOptions = {
       center: new window.naver.maps.LatLng(loc),
-      zoom: 14,
+      zoom: 15,
       scaleControl: true,
       mapDataControl: true,
       logoControlOptions: {
-        position: naver.maps.Position.BOTTOM_LEFT,
+        position: naver.maps.Position.TOP_RIGHT,
       },
     };
     const map = new window.naver.maps.Map(mapId, mapOptions);
@@ -24,7 +24,7 @@ export default function Map({ loc }: { loc: Coordinates }) {
 
     new naver.maps.Marker({
       position: location,
-      map,
+      map: map,
     });
   }, [loc]);
 
@@ -36,7 +36,7 @@ export default function Map({ loc }: { loc: Coordinates }) {
         src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID}`}
         onReady={initializeMap}
       ></Script>
-      <div id={mapId} className="w-full sm:h-4/6 h-5/6" />
+      <div id={mapId} className="sm:h-4/6 h-5/6" />
     </>
   );
 }
