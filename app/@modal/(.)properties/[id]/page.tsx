@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
+import Navermap from "@/components/map/NaverMap";
 
 export async function generateMetadata({
   params,
@@ -67,11 +68,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     <Modal>
       <section className="p-2 my-4 sm:mt-8">
         <BreadCrumbs category={category} name={name} />
-        {/* <header className="flex justify-between items-center my-2">
-        <h1 className="sm:flex sm:text-2xl text-base tracking-wider font-pretendard_bold">
-          {name}
-        </h1>
-      </header> */}
         <ImageContainer image={property.image} name={property.name} />
         <section className="mt-2 text-justify">
           <header className="flex justify-between gap-x-4 items-center">
@@ -87,7 +83,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
         </section>
-        <Map loc={[Number(property.longitude), Number(property.latitude)]} />
+        {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
+        <Navermap
+          loc={[Number(property.longitude), Number(property.latitude)]}
+        />
       </section>
     </Modal>
   );
