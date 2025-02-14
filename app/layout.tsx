@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     images: "/images/twitter.png",
   },
   icons: {
-    icon: "/images/hotSpring.png",
+    icon: "/favicon.png",
   },
   keywords: [
     "온천",
