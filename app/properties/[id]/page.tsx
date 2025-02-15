@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
+import Navermap from "@/components/map/NaverMap";
 import GoogleMap from "@/components/map/GoogleMap";
 
 export async function generateMetadata({
@@ -67,15 +68,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
-      <section className="p-2 my-4 sm:mt-8">
+      <div className="p-2 my-4 sm:mt-8 overflow-auto">
         <BreadCrumbs category={category} name={name} />
-        {/* <header className="flex justify-between items-center my-2">
-        <h1 className="sm:flex sm:text-2xl text-base tracking-wider font-pretendard_bold">
-          {name}
-        </h1>
-      </header> */}
         <ImageContainer image={property.image} name={property.name} />
-        <section className="mt-2 text-justify">
+        <section className="mt-2 text-justify overflow-x-scroll">
           <header className="flex justify-between gap-x-4 items-center">
             <h1 className="text-xl tracking-wider font-pretendard_bold">
               {name}
@@ -90,9 +86,11 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <ThermalDetails property={thermal} />
         </section>
         {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
-        \
-        <GoogleMap lat={latitude} lon={longitude} name={name} />
-      </section>
+        <Navermap
+          loc={[Number(property.longitude), Number(property.latitude)]}
+        />
+        {/* <GoogleMap lat={latitude} lon={longitude} name={name} /> */}
+      </div>
     </Modal>
   );
 }

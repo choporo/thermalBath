@@ -86,10 +86,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <ThermalDetails property={thermal} />
         </section>
         {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
-        {/* <Navermap
+        <Navermap
           loc={[Number(property.longitude), Number(property.latitude)]}
-        /> */}
-        <GoogleMap lat={latitude} lon={longitude} name={name} />
+        />
+        {/* <GoogleMap lat={latitude} lon={longitude} name={name} /> */}
       </div>
     </Modal>
   );

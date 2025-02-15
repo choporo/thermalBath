@@ -2,7 +2,6 @@
 import { Coordinates } from "@/utils/types";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
-
 import React from "react";
 
 function NaverMap({ loc }: { loc: Coordinates }) {
@@ -50,9 +49,10 @@ function NaverMap({ loc }: { loc: Coordinates }) {
       <Script
         type="text/javascript"
         src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID}`}
+        strategy="afterInteractive"
       />
 
-      <div ref={mapElement} className="w-full h-full"></div>
+      <div ref={mapElement} className="w-full h-4/5"></div>
     </>
   );
 }
