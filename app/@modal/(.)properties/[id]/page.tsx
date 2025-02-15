@@ -3,13 +3,13 @@ import BreadCrumbs from "@/components/properties/BreadCrumbs";
 import { fetchPropertyDetails } from "@/utils/action";
 import { redirect } from "next/navigation";
 import ImageContainer from "@/components/properties/ImageContainer";
-import Map from "@/components/map/Map";
 import PropertyDetails from "@/components/properties/PropertyDetails";
 import { Separator } from "@/components/ui/separator";
 import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import Navermap from "@/components/map/NaverMap";
+import GoogleMap from "@/components/map/GoogleMap";
 
 export async function generateMetadata({
   params,
@@ -52,6 +52,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     name,
     phone,
     temperature,
+    latitude,
+    longitude,
   } = property;
   const thermal = {
     address,
@@ -66,10 +68,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
-      <section className="p-2 my-4 sm:mt-8">
+      <div className="p-2 my-4 sm:mt-8 overflow-auto">
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />
-        <section className="mt-2 text-justify">
+        <section className="mt-2 text-justify overflow-x-scroll">
           <header className="flex justify-between gap-x-4 items-center">
             <h1 className="text-xl tracking-wider font-pretendard_bold">
               {name}
@@ -84,10 +86,11 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <ThermalDetails property={thermal} />
         </section>
         {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
-        <Navermap
+        {/* <Navermap
           loc={[Number(property.longitude), Number(property.latitude)]}
-        />
-      </section>
+        /> */}
+        <GoogleMap lat={latitude} lon={longitude} name={name} />
+      </div>
     </Modal>
   );
 }

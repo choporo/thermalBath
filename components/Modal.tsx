@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { Dialog, DialogContent, DialogOverlay } from "./ui/dialog";
 import { useRouter } from "next/navigation";
 
@@ -11,10 +11,12 @@ export function Modal({ children }: { children: ReactNode }) {
     router.back();
   };
 
+  useEffect(() => {});
+
   return (
     <Dialog defaultOpen={true} open={true} onOpenChange={handleOpenChange}>
       <DialogOverlay>
-        <DialogContent className="overflow-y-scroll">{children}</DialogContent>
+        <DialogContent>{children}</DialogContent>
       </DialogOverlay>
     </Dialog>
   );

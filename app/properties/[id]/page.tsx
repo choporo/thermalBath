@@ -3,12 +3,12 @@ import BreadCrumbs from "@/components/properties/BreadCrumbs";
 import { fetchPropertyDetails } from "@/utils/action";
 import { redirect } from "next/navigation";
 import ImageContainer from "@/components/properties/ImageContainer";
-import Map from "@/components/map/Map";
 import PropertyDetails from "@/components/properties/PropertyDetails";
 import { Separator } from "@/components/ui/separator";
 import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
+import GoogleMap from "@/components/map/GoogleMap";
 
 export async function generateMetadata({
   params,
@@ -51,6 +51,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     name,
     phone,
     temperature,
+    latitude,
+    longitude,
   } = property;
   const thermal = {
     address,
@@ -87,7 +89,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
         </section>
-        <Map loc={[Number(property.longitude), Number(property.latitude)]} />
+        {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
+        \
+        <GoogleMap lat={latitude} lon={longitude} name={name} />
       </section>
     </Modal>
   );
