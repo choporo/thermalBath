@@ -30,15 +30,14 @@ function SpringFeatures() {
           <h2 className="sm:text-xl text-base font-pretendard_bold tracking-wider leading-loose ">
             5. 올바른 온천욕
           </h2>
-          <p className="leading-loose tracking-wider first-letter:ml-1 text-justify">
-            {HowToSpa[0].label}
-          </p>
-          <p className="leading-loose tracking-wider first-letter:ml-1 text-justify">
-            {HowToSpa[1].label}
-          </p>
-          <p className="leading-loose tracking-wider first-letter:ml-1 text-justify">
-            {HowToSpa[2].label}
-          </p>
+          {HowToSpa.map((spa, index) => (
+            <p
+              className="leading-loose tracking-wider first-letter:ml-1 text-justify"
+              key={index}
+            >
+              {spa.label}
+            </p>
+          ))}
         </div>
       </div>
     </article>

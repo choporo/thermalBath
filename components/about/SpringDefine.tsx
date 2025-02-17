@@ -13,21 +13,16 @@ function SpringDefine() {
       </h3>
       <aside className="grid lg:grid-cols-2 gap-x-5 items-center justify-between">
         <div>
-          <p className="sm:text-base/loose text-sm/loose tracking-wider sm:ml-4 text-justify ml-1">
-            {ThermalDefinition[1].label}
-          </p>
-          <p className="sm:text-base/loose text-sm/loose tracking-wider sm:ml-4 text-justify ml-1 ">
-            {ThermalDefinition[2].label}
-          </p>
-          <p className="sm:text-base/loose text-sm/loose tracking-wider sm:ml-4 mb-2 ml-1 text-justify">
-            {ThermalDefinition[3].label}
-          </p>
-          <p className="mb-2 sm:text-base/loose text-sm/loose tracking-wider text-justify ml-1">
-            &nbsp;{ThermalDefinition[4].label}
-          </p>
-          <p className="mb-2 sm:text-base/loose text-sm/loose tracking-wider text-justify first-letter:ml-1">
-            &nbsp;{ThermalDefinition[5].label}
-          </p>
+          {ThermalDefinition.map((item, index) =>
+            index === 0 || index > 5 ? null : (
+              <p
+                className="sm:text-base/loose text-sm/loose tracking-wider sm:ml-4 text-justify my-1 sm:my-2 ml-1"
+                key={index}
+              >
+                {item.label}
+              </p>
+            )
+          )}
         </div>
         <div className="hidden sm:grid relative h-full">
           <Image

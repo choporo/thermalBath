@@ -1,19 +1,14 @@
 import React from "react";
 import SpringDefine from "./SpringDefine";
 import WaterComponent from "./WaterComponent";
-import { WaterElement } from "@/utils/types";
+import { HowToSpa, WaterElement } from "@/utils/types";
 import Image from "next/image";
 import newlogo from "@/public/images/newlogo.png";
+import payAttention from "@/public/images/payAttention.png";
 
 function PcVersion({ className }: { className: string }) {
   return (
     <div className={`lg:p-10 p-3 ${className}`}>
-      {/* <div className="flex justify-center items-center gap-x-2 mb-2">
-        <h1 className="lg:text-3xl text-xl font-pretendard_bold text-green-700 tracking-wider text-center mb-1 leading-loose">
-          한국의 <span className="text-red-600">온천</span>
-        </h1>
-        <Image src={bath} alt="목욕간판" className="w-8 h-12" />
-      </div> */}
       <SpringDefine />
       <WaterComponent />
       <div className="mt-5">
@@ -31,11 +26,33 @@ function PcVersion({ className }: { className: string }) {
         <h2 className="text-xl/loose font-pretendard_bold tracking-wider">
           4. 국내 온천 인증
         </h2>
-        <div className="flex items-center text-center">
-          <Image src={newlogo} alt="온천인증 로고" className="w-20 h-20" />
-          <h4 className="col-span-3 text-base/loose tracking-wider">
-            {WaterElement[18].label}
-          </h4>
+        <div className="grid grid-cols-2 gap-x-5">
+          <div>
+            <div className="flex items-center text-center">
+              <Image src={newlogo} alt="온천인증 로고" className="w-20 h-20" />
+              <p className="col-span-3 text-base/loose tracking-wider">
+                {WaterElement[18].label}
+              </p>
+            </div>
+            <h2 className="sm:text-xl text-base font-pretendard_bold tracking-wider leading-loose mt-5">
+              5. 올바른 온천욕
+            </h2>
+            <div>
+              {HowToSpa.map((spa, index) => (
+                <p
+                  className="leading-loose tracking-wider first-letter:ml-1 text-justify"
+                  key={index}
+                >
+                  {spa.label}
+                </p>
+              ))}
+            </div>
+          </div>
+          <Image
+            src={payAttention}
+            alt="옛날 포스터"
+            className="w-full h-4/5 rounded-md"
+          />
         </div>
       </div>
     </div>
