@@ -67,11 +67,16 @@ function PropertyCard({
           </p>
           <div className="flex justify-between items-center mx-2">
             <p className="text-sm mb-2 tracking-wider">
-              <span>₩{fee.split("/")[0]}</span>
+              <span>₩{fee}</span>
             </p>
-            <p className="text-xs mb-2 tracking-wide">
+            <p className="text-xs mb-2 sm:tracking-wide">
               <span>{formatQuantity(baths, "실내탕")} &middot; </span>
-              <span>{formatQuantity(openAirBaths, "노천탕")} &middot; </span>
+              {openAirBaths === 0 ? null : (
+                <span>
+                  {formatQuantity(openAirBaths, "노천탕")}
+                  &middot;&nbsp;
+                </span>
+              )}
               <span>{formatQuantity(sauna, "사우나")}</span>
             </p>
           </div>

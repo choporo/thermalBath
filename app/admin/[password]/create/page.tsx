@@ -51,8 +51,8 @@ function CreatePropertyPage() {
           </div>
           <h3 className="text-lg mt-8 mb-4 font-medium">탕/사우나 개수</h3>
           <CounterInput detail="baths" />
-          <CounterInput detail="openAirBaths" />
           <CounterInput detail="sauna" />
+          <CounterInput detail="openAirBaths" />
           <SubmitButton text="등록하기" className="mt-12" />
         </FormContainer>
       </div>
