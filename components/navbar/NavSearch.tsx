@@ -32,7 +32,7 @@ function NavSearch() {
     <Input
       type="text"
       className="max-w-40 sm:max-w-sm lg:max-w-xl dark:bg-muted text-xs"
-      placeholder="원하는 검색어를 입력해 주세요"
+      placeholder="예 : 노천탕, 세신, 드라이기..."
       value={search}
       onChange={(e) => {
         setSearch(e.target.value);
