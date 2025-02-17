@@ -47,6 +47,12 @@ type HowTo = {
   label : string
 }
 
+export type AdminProps = {
+  id: string,
+  name: string,
+  category: string,
+  }
+
 export const ThermalDefinition: Definition[] = [
   {
     label: "지하로부터 솟아나는 25°C 이상의 온수이자 다음의 성분기준을 모두 갖춘 경우로서 음용 또는 목욕용으로 사용되어도 인체에 해롭지 아니한 것"

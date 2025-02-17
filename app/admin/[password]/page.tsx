@@ -24,8 +24,11 @@ async function AdminPage({ params }: { params: { password: string } }) {
         <p className="text-sm"> 총 {propertiesLength}개</p>
       </div>
       <div className="my-2">
-        <Tabs defaultValue="seoul" className="mx-auto">
+        <Tabs defaultValue="all" className="mx-auto">
           <TabsList className="justify-around w-full">
+            <TabsTrigger value="all" className="text-xs">
+              전체
+            </TabsTrigger>
             <TabsTrigger value="seoul" className="text-xs">
               서울/인천
             </TabsTrigger>
@@ -69,6 +72,9 @@ async function AdminPage({ params }: { params: { password: string } }) {
               제주
             </TabsTrigger>
           </TabsList>
+          <TabsContent value="all">
+            <AdminPropertiesLists password={password} />
+          </TabsContent>
           <TabsContent value="seoul">
             <AdminPropertiesLists category={"서울/인천"} password={password} />
           </TabsContent>

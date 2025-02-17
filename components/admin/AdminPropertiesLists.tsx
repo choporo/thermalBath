@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import FormContainer from "../form/FormContainer";
 import { IconButton } from "../form/Buttons";
-import { deletePropertyAction, fetchProperties } from "@/utils/action";
+import { deletePropertyAction, fetchAdminProperties } from "@/utils/action";
 import {
   Table,
   TableBody,
@@ -13,17 +14,32 @@ import {
 } from "@/components/ui/table";
 import Link from "next/link";
 import EmptyList from "../home/EmptyList";
+import { AdminProps } from "@/utils/types";
+import PaginationSection from "../properties/PaginationSection";
 
-async function AdminPropertiesLists({
+function AdminPropertiesLists({
   password,
   category,
 }: {
   password: string;
-  category: string;
+  category?: string;
 }) {
-  const properties = await fetchProperties({ category });
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [posts, setPosts] = useState<AdminProps[]>([]);
+  const lastItemIndex = currentPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
+  const currentItems = posts.slice(firstItemIndex, lastItemIndex);
 
-  if (properties.length === 0) {
+  useEffect(() => {
+    const fetchData = async () => {
+      const properties: AdminProps[] = await fetchAdminProperties({ category });
+      setPosts(properties);
+    };
+    fetchData();
+  }, []);
+
+  if (posts.length === 0) {
     return <EmptyList />;
   }
 
@@ -31,7 +47,7 @@ async function AdminPropertiesLists({
     <div>
       <Table className="text-sm">
         <TableCaption className="text-start">
-          총 &nbsp;{properties.length} 개
+          총 &nbsp;{posts.length} 개
         </TableCaption>
         <TableHeader>
           <TableRow>
@@ -40,7 +56,7 @@ async function AdminPropertiesLists({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {properties.map((property, index) => {
+          {currentItems.map((property, index) => {
             const { id: propertyId, name } = property;
             return (
               <TableRow key={index} className="text-center">
@@ -56,6 +72,14 @@ async function AdminPropertiesLists({
           })}
         </TableBody>
       </Table>
+      <div className="my-5">
+        <PaginationSection
+          totalItems={posts.length}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
     </div>
   );
 }

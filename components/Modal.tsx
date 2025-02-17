@@ -1,8 +1,9 @@
 "use client";
 
 import { ReactNode, useEffect } from "react";
-import { Dialog, DialogContent, DialogOverlay } from "./ui/dialog";
+import { Dialog, DialogContent, DialogOverlay, DialogTitle } from "./ui/dialog";
 import { useRouter } from "next/navigation";
+import { DialogDescription } from "@radix-ui/react-dialog";
 
 export function Modal({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -16,7 +17,11 @@ export function Modal({ children }: { children: ReactNode }) {
   return (
     <Dialog defaultOpen={true} open={true} onOpenChange={handleOpenChange}>
       <DialogOverlay>
-        <DialogContent>{children}</DialogContent>
+        <DialogContent>
+          <DialogTitle></DialogTitle>
+          <DialogDescription></DialogDescription>
+          {children}
+        </DialogContent>
       </DialogOverlay>
     </Dialog>
   );

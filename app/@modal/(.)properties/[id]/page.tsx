@@ -8,7 +8,6 @@ import { Separator } from "@/components/ui/separator";
 import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
-import Navermap from "@/components/map/NaverMap";
 import GoogleMap from "@/components/map/GoogleMap";
 
 export async function generateMetadata({

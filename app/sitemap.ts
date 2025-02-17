@@ -8,7 +8,7 @@ export default async function Sitemap(): Promise<MetadataRoute.Sitemap>{
         lastModified: post.updateAt
     }))
     
-    const routes = ["", "/properties", "/about"].map((route) =>({
+    const routes = ["", "/about"].map((route) =>({
         url: `https://thermalbath.co.kr/properties${route}`,
         lastModified: new Date().toISOString().split("T")[0]
     }))

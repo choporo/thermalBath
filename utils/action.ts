@@ -110,12 +110,32 @@ export const fetchProperties = async ({
       sauna: true
     },
     orderBy: {
-     baths: "asc"
+     updateAt: "desc"
     },
   });
   return properties
 };
 
+export const fetchAdminProperties = async ({
+  category,
+}: {
+  category?: string;
+}) => {
+  const properties = await db.property.findMany({
+    where: {
+      category
+    },
+    orderBy: {
+      updateAt:"desc"
+    },
+    select: {
+        id: true,
+        name: true,
+        category: true,
+    },
+  });
+  return properties;
+};
 
 
 export const fetchPropertyDetails = (id:string) => {
