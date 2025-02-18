@@ -1,4 +1,5 @@
-import { Modal } from "@/components/Modal";
+// import { Modal } from "@/components/Modal";
+import dynamic from "next/dynamic";
 import BreadCrumbs from "@/components/properties/BreadCrumbs";
 import { fetchPropertyDetails } from "@/utils/action";
 import { redirect } from "next/navigation";
@@ -65,6 +66,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     temperature,
   };
 
+  const Modal = dynamic(() => import("@/components/Modal"));
+
   return (
     <Modal>
       <div className="p-2 my-4 sm:mt-8 overflow-auto">
@@ -72,9 +75,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         <ImageContainer image={property.image} name={property.name} />
         <section className="mt-2 text-justify overflow-x-scroll">
           <header className="flex justify-between gap-x-4 items-center">
-            <h1 className="text-xl tracking-wider font-pretendard_bold">
-              {name}
-            </h1>
+            <h1 className="text-xl tracking-wider font-bold">{name}</h1>
             <div className="flex gap-x-1 items-center mr-1">
               <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
               <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>

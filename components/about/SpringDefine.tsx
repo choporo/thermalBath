@@ -1,11 +1,11 @@
 import { ThermalDefinition } from "@/utils/types";
 import Image from "next/image";
-import chuksan from "@/public/images/chuksan.jpg";
+import chuksan from "@/public/images/chuksan.avif";
 
 function SpringDefine() {
   return (
     <div>
-      <h2 className="lg:text-xl/8 text-base/8 font-pretendard_bold tracking-widest">
+      <h2 className="lg:text-xl/8 text-base/8 font-pretendard_bold tracking-widest font-bold">
         1. 온천 정의
       </h2>
       <h3 className="sm:text-base text-sm tracking-wider leading-loose sm:my-2">
@@ -33,7 +33,8 @@ function SpringDefine() {
               objectPosition: "50% 60%",
             }}
             sizes="100vw"
-            className="w-full md:h-60 lg:h-80 rounded object-cover"
+            className="w-full lg:h-80 rounded object-cover"
+            priority
           />
           <p className="text-sm text-center mt-2">
             {"<"}1973년 척산온천휴양촌 옛 모습{">"}

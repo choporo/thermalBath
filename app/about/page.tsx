@@ -20,10 +20,15 @@ function AboutPage() {
   return (
     <article className="sm:p-1">
       <div className="flex justify-center items-center gap-x-2 sm:p-2">
-        <h1 className="lg:text-3xl text-xl font-pretendard_bold text-green-700 tracking-wider text-center leading-loose">
+        <h1 className="lg:text-3xl text-xl font-bold text-green-700 tracking-wider text-center leading-loose">
           한국의 <span className="text-red-600">온천</span>
         </h1>
-        <Image src={bath} alt="목욕간판" className="sm:w-10 sm:h-14 w-8 h-12" />
+        <Image
+          src={bath}
+          alt="목욕간판"
+          className="sm:w-10 sm:h-14 w-8 h-12"
+          priority
+        />
       </div>
       <PcVersion className="hidden sm:grid" />
       <MobileVersion className="sm:hidden grid" />

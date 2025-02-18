@@ -82,27 +82,6 @@ const bagel = localFont({
   variable: "--font-bagel",
 });
 
-const pretendard = localFont({
-  src: "../public/font/pretendard.otf",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-pretendard",
-});
-
-const pretendard_bold = localFont({
-  src: "../public/font/pretendard_bold.otf",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-pretendard",
-});
-
-const pretendard_semibold = localFont({
-  src: "../public/font/pretendard_semibold.otf",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-pretendard",
-});
-
 export default function RootLayout({
   children,
   modal,
@@ -115,7 +94,7 @@ export default function RootLayout({
       <head>
         <GoogleAdSense />
       </head>
-      <body className={pretendard.className}>
+      <body className={inter.className}>
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}

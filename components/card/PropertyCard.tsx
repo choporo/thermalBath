@@ -39,7 +39,7 @@ function PropertyCard({
       }}
       whileTap={{ scale: 0.9 }}
     >
-      <Link href={`/properties/${propertyId}`} scroll={false}>
+      <Link href={`/properties/${propertyId}`} scroll={false} rel="preload">
         <div className="content">
           <div className="content relative h-[220px] overflow-hidden rounded-md">
             <Image
@@ -50,12 +50,11 @@ function PropertyCard({
               placeholder="blur"
               sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw"
               className="image p-2 rounded-lg object-cover transform group-hover:scale-110 transition-transform duration-500"
+              priority
             />
           </div>
           <div className="flex justify-between items-center mx-2">
-            <h1 className="text-lg mt-1 tracking-wider font-pretendard_bold">
-              {name}
-            </h1>
+            <h1 className="text-lg mt-1 tracking-wider font-bold">{name}</h1>
             <div className="flex gap-x-1 items-center">
               <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 " />
               <p className="text-center text-xs">{rating}건+</p>

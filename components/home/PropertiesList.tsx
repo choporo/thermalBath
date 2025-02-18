@@ -18,7 +18,7 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
     <>
       <div className="flex justify-end items-center">
         <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 " />
-        <p className="text-xs mx-1 font-pretendard_bold text-right tracking-wider">
+        <p className="text-xs mx-1 font-bold text-right tracking-wider">
           {"("}방문자 리뷰{")"} :
           <span className="text-green-700">&nbsp;Naver</span>
         </p>

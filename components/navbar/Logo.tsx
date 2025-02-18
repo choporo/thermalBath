@@ -9,19 +9,26 @@ const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center flex-wrap ">
-      <p className="hidden md:flex font-bagel text-center text-3xl tracking-wider text-red-600">
-        온천 갈
-        <span className="hidden md:flex font-bagel text-center text-3xl tracking-wider text-green-700">
+    <Link
+      href="/"
+      className="flex items-center flex-wrap"
+      aria-label="thermalbath-main"
+      rel="preload"
+    >
+      <div className="hidden md:flex font-bagel text-center text-3xl tracking-wider">
+        <p className=" text-red-600" rel="preload">
+          온천 갈
+        </p>
+        <p className=" text-green-700" rel="preload">
           &nbsp;지도
-        </span>
-      </p>
+        </p>
+      </div>
+
       <Lottie
         loop
         animationData={hotSpring}
         play
-        style={{ width: 60, height: 60 }}
-        className="items-center mb-2"
+        className="items-center h-12 w-12"
       />
     </Link>
   );

@@ -1,4 +1,4 @@
-import spaIcon from "@/public/images/spaIcon.svg";
+import spaIcon from "@/public/images/spaIcon.png";
 import Image from "next/image";
 
 function UserIcon() {
@@ -6,10 +6,8 @@ function UserIcon() {
     <Image
       src={spaIcon}
       alt="userIcon"
-      width={35}
-      height={35}
       unoptimized
-      className="sm:flex hidden"
+      className="sm:flex hidden h-7 w-9"
     />
   );
 }

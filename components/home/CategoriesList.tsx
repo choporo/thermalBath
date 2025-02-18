@@ -26,7 +26,7 @@ function CategoriesList({
                     isActive ? "text-primary" : ""
                   } `}
                 >
-                  <p className="text-base tracking-widest font-pretendard_semibold">
+                  <p className="text-base tracking-widest font-semibold">
                     {item.label}
                   </p>
                 </article>

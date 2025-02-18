@@ -59,9 +59,6 @@ const config: Config = {
     },
     fontFamily: {
       bagel: ["bagel"],
-      pretendard:["pretendard"],
-      pretendard_bold:["pretendard_bold"],
-      pretendard_semibold:["pretendard_semibold"]
     },
   },
   plugins: [require("tailwindcss-animate")],

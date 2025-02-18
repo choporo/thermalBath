@@ -53,21 +53,3 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: pretendard;
-  src: url("../public/font/pretendard.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: pretendard_bold;
-  src: url("../public/font/pretendard_bold.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: pretendard_bold;
-  src: url("../public/font/pretendard_semibold.otf");
-  font-weight: normal;
-  font-style: normal;
-}

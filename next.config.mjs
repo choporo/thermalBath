@@ -9,6 +9,7 @@ const nextConfig = {
     }
   },
   images: {
+    minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: "https",
@@ -18,7 +19,8 @@ const nextConfig = {
   },
   eslint:{
     ignoreDuringBuilds: true,
-  }
+  },
+  formats:["image/avif", "image/webp"],
 };
 
 export default nextConfig;
