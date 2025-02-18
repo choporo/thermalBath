@@ -64,15 +64,15 @@ function PropertyCard({
             {address.split(" ")[0]} {address.split(" ")[1]}{" "}
             {address.split(" ")[2]}
           </p>
-          <div className="flex justify-between items-center mx-2">
-            <p className="text-sm mb-2 tracking-wider">
+          <div className="flex justify-between items-center mx-2 mb-2">
+            <p className="text-sm tracking-wider">
               <span>₩{fee}</span>
             </p>
-            <p className="text-xs mb-2 sm:tracking-wide">
-              <span>{formatQuantity(baths, "실내탕")} &middot; </span>
+            <p className="text-xs sm:tracking-wide ">
+              <span>{formatQuantity(baths, "실내")} &middot; </span>
               {openAirBaths === 0 ? null : (
                 <span>
-                  {formatQuantity(openAirBaths, "노천탕")}
+                  {formatQuantity(openAirBaths, "노천")}
                   &middot;&nbsp;
                 </span>
               )}

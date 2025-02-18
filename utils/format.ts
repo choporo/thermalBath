@@ -10,5 +10,5 @@ export const formatCurrency = (amount: number | null) => {
 
 
 export function formatQuantity(quantity: number, noun: string): string {
-  return quantity === 0 ? `${noun} : 0` : `${noun} : ${quantity}개 `
+  return quantity === 0 ? `${noun} : 0` : `${noun} : ${quantity} `
 }
