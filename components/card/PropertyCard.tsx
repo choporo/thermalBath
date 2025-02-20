@@ -69,13 +69,13 @@ function PropertyCard({
               <span>₩{fee}</span>
             </p>
             <p className="text-xs sm:tracking-wide ">
-              <span>{formatQuantity(baths, "실내")} &middot; </span>
               {openAirBaths === 0 ? null : (
                 <span>
                   {formatQuantity(openAirBaths, "노천")}
                   &middot;&nbsp;
                 </span>
               )}
+              <span>{formatQuantity(baths, "실내")} &middot; </span>
               <span>{formatQuantity(sauna, "사우나")}</span>
             </p>
           </div>

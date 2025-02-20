@@ -7,7 +7,7 @@ function UserIcon() {
       src={spaIcon}
       alt="userIcon"
       unoptimized
-      className="sm:flex hidden h-7 w-9"
+      className="sm:flex hidden h-7 w-10"
     />
   );
 }

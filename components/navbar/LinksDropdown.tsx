@@ -17,7 +17,7 @@ function LinksDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="flex gap-2 max-w-[100px]" variant="outline">
+        <Button className="flex gap-2 max-w-[80px]" variant="outline">
           <LuAlignLeft className="w-6 h-6" aria-label="Align-left" />
           <UserIcon />
         </Button>
@@ -29,9 +29,18 @@ function LinksDropdown() {
       >
         {links.map((link) => {
           return (
-            <DropdownMenuItem key={link.href}>
-              <Image src={banana} alt="바나나우유" className="w-5 h-5 ml-1" />
-              <Link href={link.href} className="capitalize w-full">
+            <DropdownMenuItem key={link.href} aria-label="dropdownList">
+              <Image
+                src={banana}
+                alt="바나나우유"
+                className="w-5 h-5 ml-1"
+                priority
+              />
+              <Link
+                href={link.href}
+                className="capitalize w-full"
+                aria-label="한국의 온천"
+              >
                 {link.label}
               </Link>
             </DropdownMenuItem>
