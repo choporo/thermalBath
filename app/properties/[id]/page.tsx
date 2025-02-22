@@ -1,4 +1,4 @@
-// import { Modal } from "@/components/Modal";
+import { Modal } from "@/components/Modal";
 import dynamic from "next/dynamic";
 import BreadCrumbs from "@/components/properties/BreadCrumbs";
 import { fetchPropertyDetails } from "@/utils/action";
@@ -85,10 +85,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
         </section>
-        {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
-        {/* <Navermap
-          loc={[Number(property.longitude), Number(property.latitude)]}
-        /> */}
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
     </Modal>

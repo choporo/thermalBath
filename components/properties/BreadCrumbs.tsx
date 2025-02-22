@@ -22,7 +22,9 @@ function BreadCrumbs({ category, name }: { category: string; name: string }) {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-foreground">{name}</BreadcrumbPage>
+          <BreadcrumbPage className="text-foreground">
+            {name.split("(")[1] ? name.split("(")[0] : name}
+          </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
