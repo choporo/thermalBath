@@ -17,7 +17,7 @@ function WaterComponent() {
         <h3 className="sm:text-lg/loose text-base/loose font-semibold tracking-wider ml-1">
           2-1. 수소이온농도(pH)에 의한 분류
         </h3>
-        <p className="sm:text-base/loose text-sm/loose tracking-wider text-justify ml-2">
+        <p className="sm:text-base/loose text-sm/loose tracking-wider text-justify first-letter:ml-1">
           {WaterElement[0].label}
         </p>
         <div className="grid lg:grid-cols-12 gap-x-4 items-center mt-1">
@@ -31,7 +31,7 @@ function WaterComponent() {
             {WaterElement.map((water, index) =>
               index === 0 || index > 5 ? null : (
                 <p
-                  className="sm:text-base/loose text-sm tracking-wider text-justify my-0.5 sm:my-2"
+                  className="sm:text-base/loose text-sm tracking-wider ml-3 text-justify my-0.5 sm:my-2"
                   key={index}
                 >
                   {water.label}
@@ -45,7 +45,7 @@ function WaterComponent() {
         <h3 className="sm:text-lg/loose text-base/loose tracking-wider font-semibold sm:ml-1">
           2-2. 주요 이온성분에 의한 형의 구분
         </h3>
-        <p className="tracking-wider sm:text-base/loose text-sm/loose text-justify sm:ml-2">
+        <p className="tracking-wider sm:text-base/loose text-sm/loose text-justify first-letter:ml-1 sm:ml-2">
           {WaterElement[6].label}
         </p>
       </div>

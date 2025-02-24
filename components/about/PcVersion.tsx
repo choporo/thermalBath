@@ -47,7 +47,7 @@ function PcVersion({ className }: { className: string }) {
             <div>
               {HowToSpa.map((spa, index) => (
                 <p
-                  className="leading-loose tracking-wider first-letter:ml-1 text-justify"
+                  className="leading-loose tracking-wider ml-1 text-justify"
                   key={index}
                 >
                   {spa.label}
