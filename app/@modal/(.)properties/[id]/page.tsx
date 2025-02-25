@@ -70,25 +70,21 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
-      <div className="p-2 my-4 sm:mt-8 overflow-auto">
+      <div className="p-2 overflow-y-scroll">
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />
-        <section className="mt-2 text-justify overflow-x-scroll">
-          <header className="flex justify-between gap-x-4 items-center">
-            <h1 className="text-xl tracking-wider font-bold">{name}</h1>
-            <div className="flex gap-x-1 items-center mr-1">
-              <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
-              <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>
-            </div>
-          </header>
+        <header className="flex justify-between gap-x-4 items-center">
+          <h1 className="text-xl tracking-wider mt-2 font-bold">{name}</h1>
+          <div className="flex gap-x-1 items-center mr-1">
+            <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
+            <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>
+          </div>
+        </header>
+        <section className="text-justify">
           <PropertyDetails details={details} />
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
         </section>
-        {/* <Map loc={[Number(property.longitude), Number(property.latitude)]} /> */}
-        {/* <Navermap
-          loc={[Number(property.longitude), Number(property.latitude)]}
-        /> */}
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
     </Modal>
