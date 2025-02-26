@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "온천 갈 지도 | 국내 온천 도감",
-    template: "%s | 온천 갈 지도",
+    template: "%s | 국내 온천도감 - 온천 갈 지도",
   },
   description: "우리나라 사람들도 잘 모르는 국내 온천 가이드",
   twitter: {
@@ -48,16 +48,18 @@ export const metadata: Metadata = {
     "반신욕",
     "노천탕",
     "노천온천",
+    "찜질방",
+    "가족탕",
   ],
   openGraph: {
-    title: "온천 갈 지도 | 국내 온천  도감",
+    title: "온천 갈 지도 | 국내 온천 도감",
     description: "우리나라 사람들도 잘 모르는 국내 온천 가이드",
     siteName: "온천 갈 지도",
     locale: "ko_KR",
     type: "website",
-    url: "",
+    url: "thermalbath.co.kr",
     images: {
-      url: "/images/hotSpring.png",
+      url: "/images/twitter.png",
     },
   },
   robots: {
