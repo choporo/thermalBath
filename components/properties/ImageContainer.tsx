@@ -15,8 +15,8 @@ function ImageContainer({ image, name }: { image: string; name: string }) {
           priority
           placeholder="blur"
           blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8cOF/PQAINwMgoLldegAAAABJRU5ErkJggg=="
-          loading="lazy"
           decoding="async"
+          loading="eager"
         />
       </div>
     </section>
