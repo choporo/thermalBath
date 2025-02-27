@@ -85,7 +85,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />
         <header className="flex justify-between gap-x-4 items-center mt-2">
-          <h1 className="sm:text-xl text-lg tracking-wider ">{name}</h1>
+          <h1 className="sm:text-xl text-lg tracking-wider font-bold">
+            {name}
+          </h1>
           <div className="flex gap-x-1 items-center mr-1">
             <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
             <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>
