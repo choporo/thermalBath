@@ -94,9 +94,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <PropertyDetails details={details} />
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
-          <div>
-            <DisplayAds />
-          </div>
         </section>
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
