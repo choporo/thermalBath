@@ -5,6 +5,7 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 
 import { useState } from "react";
 import PaginationSection from "../properties/PaginationSection";
+import InFeedAds from "../google/InFeedAds";
 
 function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,6 +28,11 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
         {currentItems.map((property, index) => {
           return <PropertyCard key={index} property={property} index={index} />;
         })}
+        <div className="sm:flex hidden">
+          {currentItems.length < 6 && currentItems.length !== 3 ? (
+            <InFeedAds />
+          ) : null}
+        </div>
       </section>
       <div className="mt-5">
         <PaginationSection

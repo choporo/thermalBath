@@ -9,6 +9,7 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import GoogleMap from "@/components/map/GoogleMap";
 import dynamic from "next/dynamic";
+import DisplayAds from "@/components/google/DisplayAds";
 
 export async function generateMetadata({
   params,
@@ -81,6 +82,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <PropertyDetails details={details} />
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
+          <div>
+            <DisplayAds />
+          </div>
         </section>
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
