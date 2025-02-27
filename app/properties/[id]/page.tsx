@@ -7,6 +7,7 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import DisplayAds from "@/components/google/DisplayAds";
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 
 export async function generateMetadata({
   params,
@@ -76,6 +77,11 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
+      <header>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
+      </header>
       <div className="px-2 overflow-y-scroll">
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />

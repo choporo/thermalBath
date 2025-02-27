@@ -1,4 +1,5 @@
 import LoadingCard from "@/components/card/LoadingCard";
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import CategoriesList from "@/components/home/CategoriesList";
 import PropertiesContainer from "@/components/home/PropertiesContainer";
 import { Suspense } from "react";
@@ -13,6 +14,11 @@ function HomePage({
 }) {
   return (
     <section>
+      <header>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
+      </header>
       <CategoriesList
         category={searchParams.category}
         search={searchParams.search}

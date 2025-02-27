@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import DisplayAds from "@/components/google/DisplayAds";
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 
 export async function generateMetadata({
   params,
@@ -80,6 +81,11 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
+      <header>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
+      </header>
       <div className="p-2 overflow-y-scroll">
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />
