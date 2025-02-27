@@ -84,8 +84,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
       <div className="p-2 overflow-y-scroll">
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />
-        <header className="flex justify-between gap-x-4 items-center">
-          <h1 className="text-xl tracking-wider mt-2">{name}</h1>
+        <header className="flex justify-between gap-x-4 items-center mt-2">
+          <h1 className="sm:text-xl tracking-wider ">{name}</h1>
           <div className="flex gap-x-1 items-center mr-1">
             <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
             <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>

@@ -55,7 +55,7 @@ function PropertyCard({
             />
           </div>
           <div className="flex justify-between items-center mx-2">
-            <h1 className="text-lg mt-1 tracking-wider font-bold">{name}</h1>
+            <h1 className="text-lg tracking-wider font-bold">{name}</h1>
             <div className="flex gap-x-1 items-center">
               <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 " />
               <p className="text-center text-xs">{rating}건+</p>
