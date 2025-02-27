@@ -64,7 +64,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   };
   const Modal = dynamic(() => import("@/components/Modal"));
   const ImageContainer = dynamic(
-    () => import("@/components/properties/ImageContainer")
+    () => import("@/components/properties/ImageContainer"),
+    { ssr: false }
   );
   const BreadCrumbs = dynamic(
     () => import("@/components/properties/BreadCrumbs")

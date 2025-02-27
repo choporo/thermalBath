@@ -11,7 +11,7 @@ import { links } from "@/utils/links";
 import Link from "next/link";
 import UserIcon from "./UserIcon";
 import Image from "next/image";
-import banana from "@/public/images/banana.png";
+import banana from "@/public/images/banana.avif";
 
 function LinksDropdown() {
   return (

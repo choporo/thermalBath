@@ -1,4 +1,4 @@
-import spaIcon from "@/public/images/spaIcon.png";
+import spaIcon from "@/public/images/spaIcon.avif";
 import Image from "next/image";
 
 function UserIcon() {
