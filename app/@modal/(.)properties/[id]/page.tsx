@@ -10,6 +10,7 @@ import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import GoogleMap from "@/components/map/GoogleMap";
+import DisplayAds from "@/components/google/DisplayAds";
 
 export async function generateMetadata({
   params,
@@ -17,7 +18,7 @@ export async function generateMetadata({
   params: { id: string };
 }): Promise<Metadata> {
   const response = await fetch(
-    `https://www.thermalbath.co.kr/properties/${params.id}`
+    `https://thermalbath.co.kr/properties/${params.id}`
   );
   const post = await fetchPropertyDetails(params.id);
 
@@ -84,6 +85,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <PropertyDetails details={details} />
           <Separator className="mt-2 mb-3 " />
           <ThermalDetails property={thermal} />
+          <div>
+            <DisplayAds />
+          </div>
         </section>
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
