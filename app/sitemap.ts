@@ -9,7 +9,7 @@ export default async function Sitemap(): Promise<MetadataRoute.Sitemap>{
     }))
     
     const routes = ["", "/about"].map((route) =>({
-        url: `https://thermalbath.co.kr/properties${route}`,
+        url: `https://thermalbath.co.kr${route}`,
         lastModified: new Date().toISOString().split("T")[0]
     }))
     

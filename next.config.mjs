@@ -16,11 +16,11 @@ const nextConfig = {
         hostname: "pjjwnwwiuqadctiveuie.supabase.co",
       },
     ],
+    formats:["image/avif", "image/webp"],
   },
   eslint:{
     ignoreDuringBuilds: true,
   },
-  formats:["image/avif", "image/webp"],
 };
 
 export default nextConfig;
