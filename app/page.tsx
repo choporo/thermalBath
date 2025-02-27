@@ -14,11 +14,6 @@ function HomePage({
 }) {
   return (
     <section>
-      <header>
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-        ) : null}
-      </header>
       <CategoriesList
         category={searchParams.category}
         search={searchParams.search}

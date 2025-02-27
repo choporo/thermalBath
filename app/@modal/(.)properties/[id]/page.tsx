@@ -81,11 +81,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <Modal>
-      <header>
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-        ) : null}
-      </header>
       <div className="p-2 overflow-y-scroll">
         <BreadCrumbs category={category} name={name} />
         <ImageContainer image={property.image} name={property.name} />
