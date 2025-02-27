@@ -10,10 +10,13 @@ function ImageContainer({ image, name }: { image: string; name: string }) {
           alt={name}
           fill
           sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw"
-          className="image p-1 rounded-lg object-cover transform hover:scale-110 transition-transform duration-500"
+          // className="image p-1 rounded-lg object-cover transform hover:scale-110 transition-transform duration-500"
+          className="object-cover"
           priority
           placeholder="blur"
-          blurDataURL={image}
+          blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8cOF/PQAINwMgoLldegAAAABJRU5ErkJggg=="
+          loading="eager"
+          decoding="async"
         />
       </div>
     </section>

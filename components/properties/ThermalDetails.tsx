@@ -15,7 +15,7 @@ function ThermalDetails({ property }: { property: PropertyDetailProps }) {
     <section className="tracking-wider sm:text-base text-sm text-justify">
       <div className="flex sm:gap-x-3 gap-x-2 items-center my-3">
         <GrLocation className="sm:w-6 w-4 sm:h-6 h-4 text-orange-500" />
-        <p className="flex items-center-center">{address.split("/")[0]}</p>
+        <p className="items-center-center">{address.split("/")[0]}</p>
       </div>
       <div className="flex sm:gap-x-3 gap-x-2  items-center my-3">
         <FiPhone className="sm:w-6 w-4 sm:h-6 h-4 text-orange-500" />

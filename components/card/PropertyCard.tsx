@@ -46,11 +46,12 @@ function PropertyCard({
               src={image}
               alt={name}
               fill
-              blurDataURL={image}
+              blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8cOF/PQAINwMgoLldegAAAABJRU5ErkJggg=="
               placeholder="blur"
               sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw"
               className="image p-2 rounded-lg object-cover transform group-hover:scale-110 transition-transform duration-500"
               priority
+              loading="eager"
             />
           </div>
           <div className="flex justify-between items-center mx-2">

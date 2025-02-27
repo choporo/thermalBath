@@ -113,6 +113,7 @@ export const fetchProperties = async ({
      updateAt: "desc"
     },
   });
+  revalidatePath("/")
   return properties
 };
 
@@ -134,6 +135,7 @@ export const fetchAdminProperties = async ({
         category: true,
     },
   });
+  revalidatePath("/admin")
   return properties;
 };
 

@@ -1,15 +1,11 @@
-// import { Modal } from "@/components/Modal";
 import dynamic from "next/dynamic";
-import BreadCrumbs from "@/components/properties/BreadCrumbs";
 import { fetchPropertyDetails } from "@/utils/action";
 import { redirect } from "next/navigation";
-import ImageContainer from "@/components/properties/ImageContainer";
 import PropertyDetails from "@/components/properties/PropertyDetails";
 import { Separator } from "@/components/ui/separator";
-import ThermalDetails from "@/components/properties/ThermalDetails";
+
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
-import GoogleMap from "@/components/map/GoogleMap";
 import DisplayAds from "@/components/google/DisplayAds";
 
 export async function generateMetadata({
@@ -68,6 +64,18 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   };
 
   const Modal = dynamic(() => import("@/components/Modal"));
+  const ImageContainer = dynamic(
+    () => import("@/components/properties/ImageContainer")
+  );
+  const BreadCrumbs = dynamic(
+    () => import("@/components/properties/BreadCrumbs")
+  );
+  const GoogleMap = dynamic(() => import("@/components/map/GoogleMap"), {
+    ssr: false,
+  });
+  const ThermalDetails = dynamic(
+    () => import("@/components/properties/ThermalDetails")
+  );
 
   return (
     <Modal>
