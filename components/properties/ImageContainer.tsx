@@ -2,6 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 function ImageContainer({ image, name }: { image: string; name: string }) {
+  const base64 = "data:image/jpeg;base64,";
+  const blurImg =
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII=";
+
   return (
     <section className="content">
       <div className="content rounded-md h-[300px] overflow-hidden relative">
@@ -14,7 +18,7 @@ function ImageContainer({ image, name }: { image: string; name: string }) {
           // className="object-cover"
           priority
           placeholder="blur"
-          blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8cOF/PQAINwMgoLldegAAAABJRU5ErkJggg=="
+          blurDataURL={base64 + blurImg}
           decoding="async"
           loading="eager"
         />

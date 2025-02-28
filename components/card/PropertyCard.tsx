@@ -25,6 +25,10 @@ function PropertyCard({
     sauna,
   } = property;
 
+  const base64 = "data:image/jpeg;base64,";
+  const blurImg =
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII=";
+
   return (
     <motion.article
       className="group relative border-2 border-gray-100 rounded-sm shadow-sm bg-slate-50"
@@ -46,7 +50,7 @@ function PropertyCard({
               src={image}
               alt={name}
               fill
-              blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8cOF/PQAINwMgoLldegAAAABJRU5ErkJggg=="
+              blurDataURL={base64 + blurImg}
               placeholder="blur"
               sizes="(max-width:768px) 100vw, (max-width: 1200px) 50vw"
               className="image p-2 rounded-lg object-cover transform group-hover:scale-110 transition-transform duration-500"
