@@ -1,8 +1,10 @@
 import { fetchPropertiesRss } from "@/utils/action";
+import { Indent } from "lucide-react";
 import RSS from "rss";
 
 export async function GET() {   
     const allPosts = await fetchPropertiesRss();
+
     const feed = new RSS({
        title: '온천 갈 지도 | 국내 온천 도감',          
        description: "우리나라 사람들도 잘 모르는 국내 온천 소개",
@@ -23,7 +25,7 @@ export async function GET() {
             date: post.updateAt
         })
     })
-     return new Response(feed.xml(), {
+     return new Response(feed.xml({indent:true}), {
         headers:{
             "Content-Type": "application/atom+xml; charset=utf-8"
         }
