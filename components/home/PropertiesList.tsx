@@ -32,7 +32,7 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
             <PropertyCard key={index} property={property} index={index} />
           )
         )}
-        <div className="sm:flex hidden">
+        <div className="lg:flex hidden">
           {currentItems.length < 6 && currentItems.length !== 3 ? (
             <InFeedAds />
           ) : null}
