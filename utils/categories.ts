@@ -62,3 +62,5 @@ export const categories: Category[] = [
     label: "제주",
   },
 ];
+
+
