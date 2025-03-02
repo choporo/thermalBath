@@ -45,7 +45,7 @@ function PropertyCard({
     >
       <Link href={`/properties/${propertyId}`} scroll={false} rel="preload">
         <div className="content">
-          <div className="content relative h-[220px] overflow-hidden rounded-md">
+          <div className="content relative h-[230px] sm:h-[280px] overflow-hidden rounded-md">
             <Image
               src={image}
               alt={name}
@@ -65,7 +65,7 @@ function PropertyCard({
               <p className="text-center text-xs">{rating}건+</p>
             </div>
           </div>
-          <p className="text-sm mx-2 tracking-wider my-1">
+          <p className="text-sm mx-2 tracking-wider">
             {address.split(" ")[0]} {address.split(" ")[1]}{" "}
             {address.split(" ")[2]}
           </p>

@@ -17,14 +17,14 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
 
   return (
     <>
-      <div className="flex justify-end items-center">
+      <div className="flex justify-end items-center my-1">
         <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 " />
         <p className="text-xs mx-1 font-bold text-right tracking-wider">
           {"("}방문자 리뷰{")"} :
           <span className="text-green-700">&nbsp;Naver</span>
         </p>
       </div>
-      <section className="mt-2 gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
+      <section className="mt-3 gap-8 grid sm:grid-cols-2 lg:grid-cols-3">
         {currentItems.map((property, index) =>
           properties.length > 70 && index === 4 ? (
             <InFeedAds key={index} />
@@ -32,11 +32,11 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
             <PropertyCard key={index} property={property} index={index} />
           )
         )}
-        {/* <div className="lg:flex hidden">
+        <div className="md:flex hidden">
           {currentItems.length < 6 && currentItems.length !== 3 ? (
             <InFeedAds />
           ) : null}
-        </div> */}
+        </div>
       </section>
       <div className="mt-5">
         <PaginationSection

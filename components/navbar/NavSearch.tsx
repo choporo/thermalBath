@@ -31,7 +31,7 @@ function NavSearch() {
   return (
     <Input
       type="text"
-      className="max-w-40 sm:max-w-sm lg:max-w-xl dark:bg-muted text-xs"
+      className="max-w-44 sm:max-w-sm  dark:bg-muted text-xs"
       placeholder="예 : 노천탕, 드라이기 유료..."
       value={search}
       onChange={(e) => {

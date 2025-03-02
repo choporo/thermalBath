@@ -8,6 +8,8 @@ import PageTransition from "@/components/animation/PageTransition";
 import { Toaster } from "@/components/ui/toaster";
 import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import { GoogleAdSense } from "@/components/google/GoogleAdSence";
+import Footer from "@/components/footer/Footer";
+import Container from "@/components/global/Container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -101,14 +103,17 @@ export default function RootLayout({
           <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}
         <Providers>
-          <Navbar />
-          <PageTransition>
-            <main className="container py-3">
-              {children}
-              {modal}
-            </main>
-            <Toaster />
-          </PageTransition>
+          <Container>
+            <Navbar />
+            <PageTransition>
+              <main className="container py-3">
+                {children}
+                {modal}
+              </main>
+              <Toaster />
+            </PageTransition>
+            <Footer />
+          </Container>
         </Providers>
       </body>
     </html>
