@@ -16,7 +16,7 @@ const DisplayAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container w-full flex">
+    <div className="adparent w-full flex justify-center text-center m-auto min-w-80">
       <ins
         className="adsbygoogle"
         style={{ display: "block " }}
