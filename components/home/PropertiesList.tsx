@@ -32,11 +32,11 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
             <PropertyCard key={index} property={property} index={index} />
           )
         )}
-        <div className="md:flex hidden w-full">
+        {/* <div className="xl:flex hidden w-full">
           {currentItems.length < 6 && currentItems.length !== 3 ? (
             <InFeedAds />
           ) : null}
-        </div>
+        </div> */}
       </section>
       <div className="mt-5">
         <PaginationSection
