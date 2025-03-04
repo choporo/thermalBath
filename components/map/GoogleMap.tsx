@@ -48,7 +48,7 @@ export function GoogleMap({
     };
     initMap();
   }, []);
-  return <div className="h-5/6 w-full mb-5" ref={mapRef} />;
+  return <div className="sm:h-5/6 h-full w-full mb-5" ref={mapRef} />;
 }
 
 export default GoogleMap;
