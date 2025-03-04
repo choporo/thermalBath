@@ -52,7 +52,7 @@ function NaverMap({ loc }: { loc: Coordinates }) {
         strategy="afterInteractive"
       />
 
-      <div ref={mapElement} className="w-full h-4/5"></div>
+      <div ref={mapElement} className="w-full h-[500px]"></div>
     </>
   );
 }

@@ -7,7 +7,7 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import DisplayAds from "@/components/google/DisplayAds";
-import GoogleAnalytics from "@/components/google/GoogleAnalytics";
+import NaverMap from "@/components/map/NaverMap";
 
 export async function generateMetadata({
   params,
@@ -63,7 +63,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     phone,
     temperature,
   };
-  const Modal = dynamic(() => import("@/components/Modal"));
   const ImageContainer = dynamic(
     () => import("@/components/properties/ImageContainer"),
     { ssr: false }
@@ -71,32 +70,31 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const BreadCrumbs = dynamic(
     () => import("@/components/properties/BreadCrumbs")
   );
-  const GoogleMap = dynamic(() => import("@/components/map/GoogleMap"), {
+  const NaverMap = dynamic(() => import("@/components/map/NaverMap"), {
     ssr: false,
   });
 
   return (
-    <Modal>
-      <div className="p-2 overflow-y-scroll">
-        <BreadCrumbs category={category} name={name} />
-        <ImageContainer image={property.image} name={property.name} />
-        <header className="flex justify-between gap-x-4 mt-2 items-center">
-          <h1 className="sm:text-xl text-lg tracking-wider font-bold">
-            {name}
-          </h1>
-          <div className="flex gap-x-1 items-center mr-1">
-            <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
-            <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>
-          </div>
-        </header>
-        <section className=" text-justify">
-          <PropertyDetails details={details} />
-          <Separator className="mt-2 mb-3 " />
-          <ThermalDetails property={thermal} />
-        </section>
-        <GoogleMap lat={latitude} lon={longitude} name={name} />
-      </div>
-    </Modal>
+    <div className="xl:px-96 lg:px-36 md:px-20 overflow-y-scroll" id="detail">
+      <BreadCrumbs category={category} name={name} />
+      <ImageContainer image={property.image} name={property.name} />
+      <header className="flex justify-between gap-x-4 mt-2 items-center">
+        <h1 className="sm:text-xl text-lg tracking-wider font-bold">{name}</h1>
+        <div className="flex gap-x-1 items-center mr-1">
+          <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 text-orange-500" />
+          <p className="text-xs mt-0.5 tracikng-wider">{rating}건↑</p>
+        </div>
+      </header>
+      <section className=" text-justify">
+        <PropertyDetails details={details} />
+        <Separator className="mt-2 mb-3 " />
+        <ThermalDetails property={thermal} />
+      </section>
+      {/* <GoogleMap lat={latitude} lon={longitude} name={name} />
+       */}
+      <NaverMap loc={[Number(longitude), Number(latitude)]} />
+    </div>
+    // {/* </Modal> */}
   );
 }
 

@@ -8,7 +8,7 @@ function ImageContainer({ image, name }: { image: string; name: string }) {
 
   return (
     <section className="content">
-      <div className="content rounded-md h-[300px] overflow-hidden relative">
+      <div className="content rounded-md h-[250px] sm:h-[300px] overflow-hidden relative">
         <Image
           src={image}
           alt={name}

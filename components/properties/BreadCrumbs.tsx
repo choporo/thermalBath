@@ -7,10 +7,18 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-function BreadCrumbs({ category, name }: { category: string; name: string }) {
+function BreadCrumbs({
+  category,
+  name,
+  classname,
+}: {
+  category: string;
+  name: string;
+  classname?: string;
+}) {
   return (
     <Breadcrumb className="mb-3">
-      <BreadcrumbList>
+      <BreadcrumbList className={`${classname}`}>
         <BreadcrumbItem>
           <BreadcrumbLink href="/">온천 갈 지도</BreadcrumbLink>
         </BreadcrumbItem>

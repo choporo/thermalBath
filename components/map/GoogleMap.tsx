@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 
-export function TempleMap({
+export function GoogleMap({
   lat,
   lon,
   name,
@@ -51,4 +51,4 @@ export function TempleMap({
   return <div className="h-5/6 w-full mb-5" ref={mapRef} />;
 }
 
-export default TempleMap;
+export default GoogleMap;
