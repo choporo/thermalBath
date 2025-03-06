@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   DropdownMenu,
@@ -12,6 +13,7 @@ import Link from "next/link";
 import UserIcon from "./UserIcon";
 import Image from "next/image";
 import banana from "@/public/images/banana.avif";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function LinksDropdown() {
   return (
@@ -29,7 +31,13 @@ function LinksDropdown() {
       >
         {links.map((link) => {
           return (
-            <DropdownMenuItem key={link.href} aria-label="dropdownList">
+            <DropdownMenuItem
+              key={link.href}
+              aria-label="dropdownList"
+              onClick={() =>
+                sendGTMEvent({ event: "aboutClicked", value: "about" })
+              }
+            >
               <Image
                 src={banana}
                 alt="바나나우유"

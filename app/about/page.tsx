@@ -1,10 +1,8 @@
-"use client";
 import bath from "@/public/images/bath.png";
 import Image from "next/image";
 import PcVersion from "@/components/about/PcVersion";
 import MobileVersion from "@/components/about/MobileVersion";
 import { Metadata } from "next";
-import { sendGTMEvent } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "한국의 온천",
@@ -21,10 +19,7 @@ export const metadata: Metadata = {
 function AboutPage() {
   return (
     <article className="sm:p-1">
-      <div
-        className="flex justify-center items-center gap-x-2 sm:p-2"
-        onClick={() => sendGTMEvent({ event: "aboutClicked", value: "about" })}
-      >
+      <div className="flex justify-center items-center gap-x-2 sm:p-2">
         <h1 className="lg:text-3xl text-xl font-bold text-green-700 tracking-wider text-center leading-loose">
           한국의 <span className="text-red-600">온천</span>
         </h1>
