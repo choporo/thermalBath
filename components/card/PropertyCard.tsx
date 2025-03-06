@@ -44,13 +44,11 @@ function PropertyCard({
       }}
       whileTap={{ scale: 0.9 }}
     >
-      <Link
-        href={`/properties/${propertyId}`}
-        scroll={false}
-        rel="preload"
-        onClick={() => sendGTMEvent({ event: "clicked", value: `${name}` })}
-      >
-        <div className="content">
+      <Link href={`/properties/${propertyId}`} scroll={false} rel="preload">
+        <div
+          className="content"
+          onClick={() => sendGTMEvent({ event: "clicked", value: `${name}` })}
+        >
           <div className="content relative h-[230px] sm:h-[280px] overflow-hidden rounded-md">
             <Image
               src={image}
