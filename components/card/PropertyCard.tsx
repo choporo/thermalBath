@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { formatQuantity } from "@/utils/format";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function PropertyCard({
   property,
@@ -43,7 +44,12 @@ function PropertyCard({
       }}
       whileTap={{ scale: 0.9 }}
     >
-      <Link href={`/properties/${propertyId}`} scroll={false} rel="preload">
+      <Link
+        href={`/properties/${propertyId}`}
+        scroll={false}
+        rel="preload"
+        onClick={() => sendGTMEvent({ event: "clicked", value: `${name}` })}
+      >
         <div className="content">
           <div className="content relative h-[230px] sm:h-[280px] overflow-hidden rounded-md">
             <Image

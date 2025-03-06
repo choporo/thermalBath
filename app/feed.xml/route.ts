@@ -1,5 +1,4 @@
 import { fetchPropertiesRss } from "@/utils/action";
-import { Indent } from "lucide-react";
 import RSS from "rss";
 
 export async function GET() {   
@@ -14,7 +13,8 @@ export async function GET() {
        copyright: `Copyright ${new Date().getFullYear().toString()}`,
        language: 'ko-Kr', 
        pubDate: new Date().toUTCString(),
-       ttl: 60,       
+       ttl: 60,  
+         
     });
 
     allPosts.map((post) =>{

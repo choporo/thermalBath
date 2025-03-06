@@ -10,6 +10,7 @@ import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import { GoogleAdSense } from "@/components/google/GoogleAdSence";
 import Footer from "@/components/footer/Footer";
 import Container from "@/components/global/Container";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -102,11 +103,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <GoogleAdSense />
-      </head>
-      <body className={inter.className}>
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}
+      </head>
+      <body className={inter.className}>
         <Providers>
           <Container>
             <Navbar />
@@ -115,6 +116,11 @@ export default function RootLayout({
                 {children}
                 {modal}
               </main>
+              {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+                <GoogleTagManager
+                  gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
+                />
+              ) : null}
               <Toaster />
             </PageTransition>
             <Footer />
