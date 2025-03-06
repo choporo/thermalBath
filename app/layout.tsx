@@ -11,6 +11,7 @@ import { GoogleAdSense } from "@/components/google/GoogleAdSence";
 import Footer from "@/components/footer/Footer";
 import Container from "@/components/global/Container";
 import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
