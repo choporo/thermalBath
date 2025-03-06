@@ -1,3 +1,4 @@
+"use client";
 import bath from "@/public/images/bath.png";
 import Image from "next/image";
 import PcVersion from "@/components/about/PcVersion";
@@ -22,7 +23,7 @@ function AboutPage() {
     <article className="sm:p-1">
       <div
         className="flex justify-center items-center gap-x-2 sm:p-2"
-        onClick={() => sendGTMEvent({ event: "clicked", value: "about" })}
+        onClick={() => sendGTMEvent({ event: "aboutClicked", value: "about" })}
       >
         <h1 className="lg:text-3xl text-xl font-bold text-green-700 tracking-wider text-center leading-loose">
           한국의 <span className="text-red-600">온천</span>
