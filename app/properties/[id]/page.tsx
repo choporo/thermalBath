@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import DisplayAds from "@/components/google/DisplayAds";
 import NaverMap from "@/components/map/NaverMap";
+import { HowToSpa } from "@/utils/types";
 
 export async function generateMetadata({
   params,
@@ -89,6 +90,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         <PropertyDetails details={details} />
         <Separator className="mt-2 mb-3 " />
         <ThermalDetails property={thermal} />
+        <p className="leading-loose tracking-wide text-xs text-center mt-1 mb-2">
+          {HowToSpa[3].label}
+        </p>
       </section>
       {/* <GoogleMap lat={latitude} lon={longitude} name={name} />
        */}

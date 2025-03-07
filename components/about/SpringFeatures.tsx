@@ -35,14 +35,16 @@ function SpringFeatures() {
           <h2 className="sm:text-xl text-base font-bold tracking-wider leading-loose ">
             5. 올바른 온천욕
           </h2>
-          {HowToSpa.map((spa, index) => (
-            <p
-              className="leading-loose tracking-wider first-letter:ml-1 text-justify"
-              key={index}
-            >
-              {spa.label}
-            </p>
-          ))}
+          {HowToSpa.map((spa, index) =>
+            index < 3 ? (
+              <p
+                className="leading-loose tracking-wider first-letter:ml-1 text-justify"
+                key={index}
+              >
+                {spa.label}
+              </p>
+            ) : null
+          )}
         </div>
       </div>
     </article>

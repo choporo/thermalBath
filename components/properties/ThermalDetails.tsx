@@ -13,7 +13,7 @@ function ThermalDetails({ property }: { property: PropertyDetailProps }) {
     property;
   return (
     <section className="tracking-wider sm:text-base text-sm text-justify">
-      <div className="flex sm:gap-x-3 gap-x-2 items-center my-3">
+      <div className="flex sm:gap-x-3 gap-x-2 items-center">
         <GrLocation className="sm:w-6 w-4 sm:h-6 h-4 text-orange-500" />
         <p className="items-center-center">{address.split("/")[0]}</p>
       </div>
@@ -44,7 +44,7 @@ function ThermalDetails({ property }: { property: PropertyDetailProps }) {
         <IoWaterOutline className="sm:w-6 w-4 sm:h-6 h-4 text-orange-500" />
         <p>{feature}</p>
       </div>
-      <div className="flex items-center sm:gap-x-3 gap-x-2 my-3">
+      <div className="flex items-center sm:gap-x-3 gap-x-2">
         <LiaTemperatureLowSolid className="sm:w-6 w-4 sm:h-6 h-4 text-orange-500" />
         <p>{temperature}</p>
       </div>
