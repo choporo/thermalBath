@@ -15,6 +15,7 @@ const nextConfig = {
       },
     ],
     formats:["image/avif", "image/webp"],
+    unoptimized: true
   },
   eslint:{
     ignoreDuringBuilds: true,
