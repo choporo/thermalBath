@@ -45,14 +45,16 @@ function PcVersion({ className }: { className: string }) {
               5. 올바른 온천욕
             </h2>
             <div>
-              {HowToSpa.map((spa, index) => (
-                <p
-                  className="leading-loose tracking-wider ml-1 text-justify"
-                  key={index}
-                >
-                  {spa.label}
-                </p>
-              ))}
+              {HowToSpa.map((spa, index) =>
+                index < 3 ? (
+                  <p
+                    className="leading-loose tracking-wider ml-1 text-justify"
+                    key={index}
+                  >
+                    {spa.label}
+                  </p>
+                ) : null
+              )}
             </div>
           </div>
           <Image
