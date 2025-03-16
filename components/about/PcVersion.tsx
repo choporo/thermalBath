@@ -36,6 +36,7 @@ function PcVersion({ className }: { className: string }) {
                 alt="온천인증 로고"
                 className="w-20 h-20"
                 priority
+                unoptimized
               />
               <p className="col-span-3 text-base/loose tracking-wider">
                 {WaterElement[18].label}
@@ -62,6 +63,7 @@ function PcVersion({ className }: { className: string }) {
             alt="옛날 포스터"
             className="w-full h-4/5 rounded-md"
             priority
+            unoptimized
           />
         </div>
       </div>

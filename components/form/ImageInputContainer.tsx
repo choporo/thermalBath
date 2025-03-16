@@ -48,6 +48,7 @@ function ImageInputContainer(props: ImageInputContainerProps) {
               height={200}
               priority
               className="rounded object-cover mb-4"
+              unoptimized
             />
             <ImageInput name={name} />
             <SubmitButton className="mt-3" text={text} />

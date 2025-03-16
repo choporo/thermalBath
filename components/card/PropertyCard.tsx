@@ -60,6 +60,7 @@ function PropertyCard({
               className="image p-2 rounded-lg object-cover transform group-hover:scale-110 transition-transform duration-500"
               priority
               loading="eager"
+              unoptimized
             />
           </div>
           <div className="flex justify-between items-center mx-2">

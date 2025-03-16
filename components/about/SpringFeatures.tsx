@@ -26,6 +26,7 @@ function SpringFeatures() {
             alt="온천인증 로고"
             className="w-20 h-20"
             priority
+            unoptimized
           />
           <p className="col-span-3 leading-loose tracking-wider text-justify">
             {WaterElement[18].label}

@@ -26,6 +26,7 @@ function WaterComponent() {
             alt="공지사항"
             className="items-center lg:mx-2 lg:col-span-8 w-full h-72 hidden md:flex rounded-sm"
             priority
+            unoptimized
           />
           <div className="grid lg:col-span-4 lg:mx-2 sm:text-base text-sm">
             {WaterElement.map((water, index) =>

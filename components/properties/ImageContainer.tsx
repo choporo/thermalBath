@@ -21,6 +21,7 @@ function ImageContainer({ image, name }: { image: string; name: string }) {
           blurDataURL={base64 + blurImg}
           decoding="async"
           loading="eager"
+          unoptimized
         />
       </div>
     </section>

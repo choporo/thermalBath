@@ -43,6 +43,7 @@ function LinksDropdown() {
                 alt="바나나우유"
                 className="w-5 h-5 ml-1"
                 priority
+                unoptimized
               />
               <Link
                 href={link.href}

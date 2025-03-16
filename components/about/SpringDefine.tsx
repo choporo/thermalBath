@@ -35,6 +35,7 @@ function SpringDefine() {
             sizes="100vw"
             className="w-full lg:h-80 rounded object-cover"
             priority
+            unoptimized
           />
           <p className="text-sm text-center mt-2">
             {"<"}1973년 척산온천휴양촌 옛 모습{">"}

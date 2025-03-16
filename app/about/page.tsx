@@ -28,6 +28,7 @@ function AboutPage() {
           alt="목욕간판"
           className="sm:w-10 sm:h-14 w-8 h-12"
           priority
+          unoptimized
         />
       </div>
       <PcVersion className="hidden sm:grid" />
