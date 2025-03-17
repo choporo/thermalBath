@@ -1,6 +1,6 @@
 import React from "react";
 import DisplayAds from "../google/DisplayAds";
-import Container from "../global/Container";
+import { sendGTMEvent } from "@next/third-parties/google";
 import play from "@/public/images/play.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +9,12 @@ function Footer() {
   return (
     <footer>
       {/* <DisplayAds /> */}
-      <div className="w-full h-16">
+      <div
+        className="w-full h-16"
+        onClick={() =>
+          sendGTMEvent({ event: "googlePlayClicked", value: `GooglePlay` })
+        }
+      >
         <Link
           href="https://play.google.com/store/apps/details?id=com.choporo.hotspring"
           passHref
