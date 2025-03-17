@@ -119,7 +119,6 @@ export default function RootLayout({
                 {children}
                 {modal}
               </main>
-
               <Toaster />
             </PageTransition>
             <Footer />

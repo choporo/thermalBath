@@ -20,10 +20,10 @@ function Logo() {
         onClick={() => sendGTMEvent({ event: "logoClicked", value: "logo" })}
       >
         <p className=" text-red-600" rel="preload">
-          온천 갈
+          온천갈
         </p>
         <p className=" text-green-700" rel="preload">
-          &nbsp;지도
+          지도
         </p>
       </div>
 
