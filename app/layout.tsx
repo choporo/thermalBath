@@ -16,8 +16,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "온천 갈 지도 | 국내 온천 도감",
-    template: "%s | 국내 온천도감 - 온천 갈 지도",
+    default: "온천갈지도 | 국내 온천 도감",
+    template: "%s | 국내 온천 도감 - 온천갈지도",
   },
   description: "우리나라 사람들도 잘 모르는 국내 온천 가이드",
   twitter: {
