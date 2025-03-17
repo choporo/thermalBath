@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DisplayAds from "../google/DisplayAds";
 import { sendGTMEvent } from "@next/third-parties/google";
@@ -8,9 +9,11 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer>
-      {/* <DisplayAds /> */}
+      <div className="hidden lg:flex">
+        <DisplayAds />
+      </div>
       <div
-        className="w-full h-16"
+        className="w-full h-16 lg:hidden"
         onClick={() =>
           sendGTMEvent({ event: "googlePlayClicked", value: `GooglePlay` })
         }
