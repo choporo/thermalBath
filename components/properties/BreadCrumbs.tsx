@@ -20,7 +20,7 @@ function BreadCrumbs({
     <Breadcrumb className="mb-3">
       <BreadcrumbList className={`${classname}`}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">온천 갈 지도</BreadcrumbLink>
+          <BreadcrumbLink href="/">온천갈지도</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
