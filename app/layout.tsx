@@ -60,12 +60,12 @@ export const metadata: Metadata = {
     "국내 온천 추천",
   ],
   openGraph: {
-    title: "온천 갈 지도 | 국내 온천 도감",
+    title: "온천갈지도 | 국내 온천 도감",
     description: "우리나라 사람들도 잘 모르는 국내 온천 가이드",
-    siteName: "온천 갈 지도",
+    siteName: "온천갈지도",
     locale: "ko_KR",
     type: "website",
-    url: "thermalbath.co.kr",
+    url: "온천갈지도",
     images: {
       url: "/images/twitter.png",
     },
