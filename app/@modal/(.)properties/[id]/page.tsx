@@ -103,7 +103,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
             {HowToSpa[3].label}
           </p>
         </section>
-        <InFeedAds />
+        <div className="mb-3">
+          <InFeedAds />
+        </div>
+
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
     </Modal>
