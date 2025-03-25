@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import DisplayAds from "@/components/google/DisplayAds";
 import NaverMap from "@/components/map/NaverMap";
 import { HowToSpa } from "@/utils/types";
+import InFeedAds from "@/components/google/InFeedAds";
 
 export async function generateMetadata({
   params,
@@ -96,6 +97,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
       </section>
       {/* <GoogleMap lat={latitude} lon={longitude} name={name} />
        */}
+      <InFeedAds />
       <NaverMap loc={[Number(longitude), Number(latitude)]} />
       {/* <footer className="w-full h-[250px]">
         <DisplayAds />
