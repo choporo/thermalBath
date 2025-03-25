@@ -121,7 +121,7 @@ export default function RootLayout({
               </main>
               <Toaster />
             </PageTransition>
-            <Footer />
+            {/* <Footer /> */}
           </Container>
         </Providers>
       </body>
