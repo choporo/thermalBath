@@ -36,7 +36,7 @@ function CreatePropertyPage() {
               name="temperature"
               type="text"
               label="온천수 최고온도"
-              defaultValue="지하"
+              defaultValue="지하 ℃"
             />
             <FormInput name="amenity" type="text" label="온천 부대시설 등" />
             <FormInput name="latitude" type="text" label="위도" />
