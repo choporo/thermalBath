@@ -9,6 +9,7 @@ import { Metadata } from "next";
 import DisplayAds from "@/components/google/DisplayAds";
 import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import { HowToSpa } from "@/utils/types";
+import InFeedAds from "@/components/google/InFeedAds";
 
 export async function generateMetadata({
   params,
@@ -102,6 +103,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
             {HowToSpa[3].label}
           </p>
         </section>
+        <InFeedAds />
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
     </Modal>
