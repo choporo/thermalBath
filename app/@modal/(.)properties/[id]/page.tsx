@@ -3,11 +3,8 @@ import { fetchPropertyDetails } from "@/utils/action";
 import { redirect } from "next/navigation";
 import PropertyDetails from "@/components/properties/PropertyDetails";
 import { Separator } from "@/components/ui/separator";
-
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
-import DisplayAds from "@/components/google/DisplayAds";
-import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import { HowToSpa } from "@/utils/types";
 import InFeedAds from "@/components/google/InFeedAds";
 
@@ -103,10 +100,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
             {HowToSpa[3].label}
           </p>
         </section>
-        <div className="mb-3">
-          <InFeedAds />
-        </div>
-
+        <InFeedAds />
         <GoogleMap lat={latitude} lon={longitude} name={name} />
       </div>
     </Modal>
