@@ -97,9 +97,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
       {/* <GoogleMap lat={latitude} lon={longitude} name={name} />
        */}
       <NaverMap loc={[Number(longitude), Number(latitude)]} />
-      <footer className="w-full h-[250px]">
+      {/* <footer className="w-full h-[250px]">
         <DisplayAds />
-      </footer>
+      </footer> */}
     </div>
     // {/* </Modal> */}
   );
