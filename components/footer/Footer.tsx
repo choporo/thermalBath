@@ -9,9 +9,6 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer>
-      <div className="hidden lg:flex">
-        <DisplayAds />
-      </div>
       <div
         className="w-full h-16 lg:hidden"
         onClick={() =>
