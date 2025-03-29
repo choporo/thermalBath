@@ -7,6 +7,7 @@ import newlogo from "@/public/images/newlogo.png";
 import payAttention from "@/public/images/payAttention.avif";
 import MineralComposition from "./MineralComposition";
 import InFeedAds from "../google/InFeedAds";
+import DisplayAds from "../google/DisplayAds";
 
 function PcVersion({ className }: { className: string }) {
   return (
@@ -14,7 +15,8 @@ function PcVersion({ className }: { className: string }) {
       <SpringDefine />
       <WaterComponent />
       <MineralComposition />
-      <InFeedAds />
+      {/* <InFeedAds /> */}
+      <DisplayAds />
       <div className="mt-2">
         <h2 className="text-xl/loose font-bold tracking-wider">
           3. 국내 온천 특징
