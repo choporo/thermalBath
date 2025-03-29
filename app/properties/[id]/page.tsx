@@ -6,8 +6,6 @@ import ThermalDetails from "@/components/properties/ThermalDetails";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import DisplayAds from "@/components/google/DisplayAds";
-import NaverMap from "@/components/map/NaverMap";
 import { HowToSpa } from "@/utils/types";
 import InFeedAds from "@/components/google/InFeedAds";
 

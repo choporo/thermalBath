@@ -77,7 +77,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const ThermalDetails = dynamic(
     () => import("@/components/properties/ThermalDetails")
   );
-
+  
   return (
     <Modal>
       <div className="p-2 overflow-y-scroll">

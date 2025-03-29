@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "온천갈지도 | 국내 온천 도감",
     template: "%s | 국내 온천 도감 - 온천갈지도",
   },
-  description: "우리나라 사람들도 잘 모르는 국내 온천 가이드",
+  description: "검증된 온천수를 사용하는 우리동네 목욕탕 안내",
   twitter: {
     card: "summary_large_image",
     images: "/images/twitter.png",
@@ -33,19 +33,6 @@ export const metadata: Metadata = {
     "Thermer spring",
     "thermal baths",
     "hot spa",
-    "온양온천",
-    "동래온천",
-    "덕구온천",
-    "금진온천",
-    "덕구온천",
-    "온천장",
-    "덕산온천",
-    "온천여행",
-    "부곡온천",
-    "수안보온천",
-    "담양온천",
-    "백암온천",
-    "화성온천",
     "온천여행",
     "힐링되는 국내온천",
     "국내온천 추천",
@@ -54,14 +41,17 @@ export const metadata: Metadata = {
     "찜질방",
     "가족탕",
     "국내온천",
-    "부산온천",
-    "대구온천",
     "한국의 온천",
     "국내 온천 추천",
+    "목욕탕",
+    "우리동네 목욕탕",
+    "세신",
+    "사우나",
+    "온천사우나",
   ],
   openGraph: {
     title: "온천갈지도 | 국내 온천 도감",
-    description: "우리나라 사람들도 잘 모르는 국내 온천 가이드",
+    description: "검증된 온천수를 사용하는 우리동네 목욕탕 안내",
     siteName: "온천갈지도",
     locale: "ko_KR",
     type: "website",
@@ -121,7 +111,7 @@ export default function RootLayout({
               </main>
               <Toaster />
             </PageTransition>
-            {/* <Footer /> */}
+            <Footer />
           </Container>
         </Providers>
       </body>
