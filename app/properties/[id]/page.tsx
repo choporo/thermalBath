@@ -93,15 +93,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           {HowToSpa[3].label}
         </p>
       </section>
-      {/* <GoogleMap lat={latitude} lon={longitude} name={name} />
-       */}
       <InFeedAds />
       <NaverMap loc={[Number(longitude), Number(latitude)]} />
-      {/* <footer className="w-full h-[250px]">
-        <DisplayAds />
-      </footer> */}
     </div>
-    // {/* </Modal> */}
   );
 }
 

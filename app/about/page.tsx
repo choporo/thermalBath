@@ -32,7 +32,7 @@ function AboutPage() {
         />
       </div>
       <PcVersion className="hidden sm:grid" />
-      <MobileVersion className="sm:hidden grid" />
+      <MobileVersion className="grid sm:hidden" />
     </article>
   );
 }

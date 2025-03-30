@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import DisplayAds from "../google/DisplayAds";
 import { sendGTMEvent } from "@next/third-parties/google";
 import play from "@/public/images/play.png";
 import Link from "next/link";
