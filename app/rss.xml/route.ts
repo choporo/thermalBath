@@ -6,7 +6,7 @@ export async function GET() {
 
     const feed = new RSS({
        title: '온천 갈 지도 | 국내 온천 도감',          
-       description: "우리나라 사람들도 잘 모르는 국내 온천 소개",
+       description: "우리나라 국내 온천 소개",
        generator: 'RSS for Node and Next.js',
        feed_url: 'https://thermalbath.co.kr/feed.xml',
        site_url: 'https://thermalbath.co.kr/sitemap.xml',
@@ -17,7 +17,7 @@ export async function GET() {
          
     });
 
-    allPosts.map((post) =>{
+    allPosts.forEach((post) =>{
         feed.item({
             title:post.name,
             description:post.feature,
