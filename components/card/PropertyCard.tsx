@@ -67,7 +67,7 @@ function PropertyCard({
             <h1 className="text-lg tracking-wider font-bold">{name}</h1>
             <div className="flex gap-x-1 items-center">
               <FaRegPenToSquare className="sm:w-4 sm:h-4 w-3 h-3 " />
-              <p className="text-center text-xs">{rating}건+</p>
+              <p className="text-center text-xs">{rating}건↑</p>
             </div>
           </div>
           <p className="text-sm mx-2 tracking-wider">
