@@ -7,7 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: [
         'Yeti',          // 네이버 검색 봇
         'Googlebot',     // 구글 검색 봇
-        'Googlebot-Image'// 구글 이미지 봇
+        'Googlebot-Image',
+        'Mediapartners-Google',
+        'Google-Display-Ads-Bot'
       ],
       allow: ['/'],
     },
